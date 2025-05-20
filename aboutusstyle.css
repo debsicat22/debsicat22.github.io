@@ -1,0 +1,547 @@
+.about-us-kurt {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .about-us-kurt .overlap-group-wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 2680px;
+    height: 3531px;
+  }
+  
+  .about-us-kurt .overlap-group {
+    position: relative;
+    width: 2785px;
+    height: 3534px;
+    left: -102px;
+  }
+  
+  .about-us-kurt .ospi {
+    position: absolute;
+    width: 2680px;
+    height: 1489px;
+    top: 0;
+    left: 102px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .text-wrapper {
+    position: absolute;
+  width: 395px;
+  top: 338px;
+  left: 314px;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .div {
+    position: absolute;
+  width: 800px;
+  top: 410px;
+  left: 314px;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .text {
+    position: absolute;
+    width: 828px;
+    top: 596px;
+    left: 314px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .docdirect-is-a {
+   position: absolute;
+  width: 776px;
+  height: 200px;
+  top: 635px;
+  left: 314px;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffde;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .rectangle {
+    position: absolute;
+    width: 2688px;
+    height: 421px;
+    top: 1189px;
+    left: 94px;
+    background-color: #d2d2d2;
+    box-shadow: inset 0px 4px 4px #00000040;
+    mix-blend-mode: hard-light;
+  }
+  
+  .about-us-kurt .p {
+    position: absolute;
+    width: 984px;
+    top: 1351px;
+    left: 314px;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-2 {
+    position: absolute;
+    width: 1237px;
+    top: 1284px;
+    left: 314px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #34321d;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .rectangle-2 {
+    position: absolute;
+    width: 2686px;
+    height: 753px;
+    top: 1489px;
+    left: 99px;
+    background-color: #46bce1;
+  }
+  
+  .about-us-kurt .docdirect-is-a-2 {
+    position: absolute;
+    width: 1234px;
+    top: 1696px;
+    left: 308px;
+    font-family: "Lato-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-3 {
+    position: absolute;
+    width: 981px;
+    top: 1564px;
+    left: 0;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #fffcfc;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-kurt .rectangle-3 {
+    position: absolute;
+    width: 2687px;
+    height: 929px;
+    top: 2242px;
+    left: 100px;
+    background-color: #d0d0d4;
+  }
+  
+  .about-us-kurt .text-wrapper-4 {
+    position: absolute;
+    width: 888px;
+    top: 2345px;
+    left: 806px;
+    font-family: "Lato-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .rectangle-4 {
+    position: absolute;
+    width: 2684px;
+    height: 481px;
+    top: 3053px;
+    left: 100px;
+    background-color: #46bce1;
+  }
+  
+  .about-us-kurt .text-wrapper-5 {
+    width: 97px;
+  top: 89px;
+  left: 1406px;
+  color: #ffffff;
+  font-size: 30px;
+  position: absolute;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-6 {
+    position: absolute;
+  width: 800px;
+  top: 89px;
+  left: 1559px;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-7 {
+    width: 800px;
+  top: 89px;
+  left: 1767px;
+  color: #ffffff;
+  font-size: 30px;
+  position: absolute;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-8 {
+    width: 800px;
+  top: 89px;
+  left: 1964px;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-9 {
+     position: absolute;
+  width: 800px;
+  top: 89px;
+  left: 2197px;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  }
+  
+  .about-us-kurt .sample {
+    position: absolute;
+    width: 565px;
+    height: 149px;
+    top: 3201px;
+    left: 197px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .img {
+    position: absolute;
+    width: 565px;
+    height: 149px;
+    top: 57px;
+    left: 275px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .rectangle-5 {
+    position: absolute;
+    width: 586px;
+    height: 95px;
+    top: 811px;
+    left: 308px;
+    background-color: #f2f2f5;
+    border-radius: 47.5px;
+  }
+  
+  .about-us-kurt .medz {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 826px;
+    left: 344px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .rectangle-6 {
+    position: absolute;
+    width: 426px;
+    height: 111px;
+    top: 1295px;
+    left: 2134px;
+    background-color: #46bce1;
+    border-radius: 50px;
+  }
+  
+  .about-us-kurt .text-wrapper-10 {
+    width: 310px;
+    height: 31px;
+    top: 1334px;
+    left: 2244px;
+    font-family: "Alegreya Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 40px;
+    white-space: nowrap;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-11 {
+    position: absolute;
+    width: 293px;
+    top: 3166px;
+    left: 885px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #fffcfc;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .OUR-HEALTH-PARTNERS {
+    position: absolute;
+    width: 800px;
+    top: 3166px;
+    left: 1529px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #fffcfc;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-12 {
+    position: absolute;
+    width: 293px;
+    top: 3221px;
+    left: 885px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-13 {
+    width: 293px;
+    top: 3255px;
+    left: 885px;
+    color: #fffcfc;
+    font-size: 20px;
+    position: absolute;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-14 {
+    position: absolute;
+    width: 293px;
+    top: 3290px;
+    left: 885px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-15 {
+    width: 293px;
+    top: 3329px;
+    left: 885px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-16 {
+    position: absolute;
+    width: 293px;
+    top: 3371px;
+    left: 885px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-17 {
+    position: absolute;
+    width: 293px;
+    top: 3221px;
+    left: 1538px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-18 {
+    position: absolute;
+    width: 293px;
+    top: 3255px;
+    left: 1538px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-19 {
+    position: absolute;
+    width: 293px;
+    top: 3290px;
+    left: 1538px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-20 {
+    position: absolute;
+    width: 293px;
+    top: 3329px;
+    left: 1538px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-21 {
+    position: absolute;
+    width: 800px;
+    top: 3166px;
+    left: 2234px;
+    font-family: "Lato-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #fffcfc;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .text-wrapper-22 {
+    position: absolute;
+    width: 103px;
+    top: 3214px;
+    left: 2291px;
+    font-family: "Lato-Medium", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-kurt .text-wrapper-23 {
+    position: absolute;
+    width: 157px;
+    top: 3258px;
+    left: 2291px;
+    font-family: "Lato-Medium", Helvetica;
+    font-weight: 500;
+    color: #fffcfc;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-kurt .play {
+    position: absolute;
+    width: 52px;
+    height: 42px;
+    top: 3206px;
+    left: 2239px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .icon {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 3254px;
+    left: 2249px;
+  }
+  
+  .about-us-kurt .whatsapp-image {
+    position: absolute;
+    width: 668px;
+    height: 668px;
+    top: 2314px;
+    left: 102px;
+    object-fit: cover;
+  }
+  
+  .about-us-kurt .text-wrapper-24 {
+    position: absolute;
+    width: 1446px;
+    top: 2662px;
+    left: 806px;
+    font-family: "Lato-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-kurt .whatsapp-image-2 {
+    position: absolute;
+    width: 1132px;
+    height: 956px;
+    top: 1382px;
+    left: 1650px;
+    object-fit: cover;
+  }
