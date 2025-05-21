@@ -70,5 +70,95 @@
       </div>
     </div>
   </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // 2. BOOK NOW alert
+    const bookNowButtons = document.querySelectorAll(".text-wrapper-10, .text-wrapper-8, .text-wrapper-17");
+    bookNowButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        alert("You're being redirected to the booking page. Please wait...");
+      });
+    });
+
+    // 3. Hover tip on "WHY CHOOSE US?"
+    const whyChooseUs = document.querySelector(".text-wrapper-11");
+    if (whyChooseUs) {
+      whyChooseUs.addEventListener("mouseenter", () => {
+        whyChooseUs.style.color = "#007BFF";
+        whyChooseUs.title = "Our unique advantages!";
+      });
+      whyChooseUs.addEventListener("mouseleave", () => {
+        whyChooseUs.style.color = ""; // revert
+      });
+    }
+
+    // 4. Scroll to top button
+    const scrollBtn = document.createElement("button");
+    scrollBtn.innerText = "↑ Top";
+    scrollBtn.style.position = "fixed";
+    scrollBtn.style.bottom = "20px";
+    scrollBtn.style.right = "20px";
+    scrollBtn.style.padding = "10px 15px";
+    scrollBtn.style.background = "#007BFF";
+    scrollBtn.style.color = "#fff";
+    scrollBtn.style.border = "none";
+    scrollBtn.style.borderRadius = "8px";
+    scrollBtn.style.cursor = "pointer";
+    scrollBtn.style.display = "none";
+    scrollBtn.style.zIndex = "1000";
+
+    document.body.appendChild(scrollBtn);
+
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // 5. Navigation feedback
+    const navLinks = document.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        console.log(`Navigating to: ${link.getAttribute("href")}`);
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // 1. Add 'fade-in' to elements on scroll
+    const fadeElements = document.querySelectorAll(".text-wrapper-11, .text-wrapper-12, .element-years-of-combined, .AFFORDABLE");
+
+    fadeElements.forEach(el => el.classList.add("fade-in"));
+
+    window.addEventListener("scroll", () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    });
+
+    // 2. Pulse animation for BOOK NOW buttons
+    const pulseButtons = document.querySelectorAll(".text-wrapper-10, .text-wrapper-8, .text-wrapper-17");
+    pulseButtons.forEach(btn => btn.classList.add("pulse"));
+
+    // 3. Slide-in intro text
+    const introElements = document.querySelectorAll(".text-wrapper-2, .docdirect-is-a");
+    introElements.forEach(el => {
+      el.classList.add("slide-in");
+    });
+
+    // Trigger intro animation after short delay
+    setTimeout(() => {
+      introElements.forEach(el => el.classList.add("show"));
+    }, 500);
+  });
+
+</script>
+
 </body>
 </html>

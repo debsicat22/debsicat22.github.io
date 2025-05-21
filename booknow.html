@@ -18,20 +18,115 @@
 <a href="contactus.html"><div class="text-wrapper-8">CONTACT US</div></a>
         </div>
         <div class="overlap">
-          <div class="text-wrapper-9">Connect, Protect, and Reflect</div>
+<div id="chatbox" class="fullpage-chatbox">
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input-wrapper">
+    <input
+      type="text"
+      id="chat-input"
+      class="chat-input"
+      placeholder="Type your message..."
+    />
+    <button id="chat-send" class="chat-send">Send</button>
+  </div>
+</div>
+<div class="booking-info" style="padding: 30px; margin: 40px auto; max-width: 1100px; border: 1px solid #ccc; border-radius: 12px; font-family: Arial, sans-serif; background: #f9f9f9;">
+  <h2 style="text-align: center; color: #00796b; margin-bottom: 100px; font-size: 4rem;">Available Doctors & Clinics</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+    <!-- Doctor Card Template -->
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center; transition: transform 0.3s ease;">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Aisha Khan" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Aisha Khan</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Aster Clinic</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 22</li>
+        <li>May 25</li>
+        <li>May 28</li>
+      </ul>
+    </div>
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Dr. Omar Ali" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Omar Ali</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Prime Hospital</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size:20px;">
+        <li>May 23</li>
+        <li>May 26</li>
+        <li>May 29</li>
+      </ul>
+    </div>
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Fatima Zahra" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Fatima Zahra</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Menalabs</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 24</li>
+        <li>May 27</li>
+        <li>May 30</li>
+      </ul>
+    </div>
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Dr. Sameer Yusuf" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Sameer Yusuf</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">NMC Hospitals</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 22</li>
+        <li>May 25</li>
+        <li>May 31</li>
+      </ul>
+    </div>
+
+    <!-- Additional doctors -->
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Dr. Lina Al Mazrouei" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Lina Al Mazrouei</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Aster Clinic</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 23</li>
+        <li>May 26</li>
+        <li>May 29</li>
+      </ul>
+    </div>
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Dr. Rashid Mohammed" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Rashid Mohammed</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Prime Hospital</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 24</li>
+        <li>May 27</li>
+        <li>May 30</li>
+      </ul>
+    </div>
+
+    <div style="background: white; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.12); width: 260px; padding: 20px; text-align: center;">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dr. Salma Yousif" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px;" />
+      <h3 style="margin: 12px 0; color: #004d40; font-size: 1.5rem;">Dr. Salma Yousif</h3>
+      <p style="color: #00796b; font-weight: 700; font-size: 1.1rem;">Menalabs</p>
+      <p style="color: #555; font-size: 16px; margin-top: 14px; font-weight: 600;">Available Dates:</p>
+      <ul style="list-style: none; padding-left: 0; color: #333; font-size: 20px;">
+        <li>May 22</li>
+        <li>May 25</li>
+        <li>May 28</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
           <div class="text"></div>
-          <div class="rectangle"></div>
-          <img class="img" src="https://c.animaapp.com/maux3g8mXDdSGo/img/rectangle-81.svg" />
-          <p class="p">DocDirect at your service. Book your consulations through us for any hospital</p>
-          <div class="rectangle-2"></div>
-          <div class="rectangle-3"></div>
           <div class="rectangle-4"></div>
-          <img
-            class="you-are-now-talking"
-            src="https://c.animaapp.com/maux3g8mXDdSGo/img/you-are-now-talking-to-docdirect-.png"
-          />
           <img class="sample-2" src="https://c.animaapp.com/maux3g8mXDdSGo/img/sample2-5.png" />
-          <img class="sample-3" src="https://c.animaapp.com/maux3g8mXDdSGo/img/sample2-5.png" />
           <div class="text-wrapper-12">EXPLORE</div>
           <div class="OUR-HEALTH-PARTNERS">OUR HEALTH PARTNERS</div>
 <a href="index.html"><div class="text-wrapper-13">HOME</div></a>
@@ -45,18 +140,92 @@
           <div class="text-wrapper-21">NMC HOSPITALS</div>
           <div class="text-wrapper-22">CONNECT WITH US</div>
           <img class="play" src="https://c.animaapp.com/maux3g8mXDdSGo/img/play-2.png" />
-          <div class="text-wrapper-23">What is your inquiry?</div>
           <div class="text-wrapper-24">DocDirect</div>
           <div class="text-wrapper-25">DocDirect UAE</div>
           <img class="icon" src="https://c.animaapp.com/maux3g8mXDdSGo/img/icon.png" />
           <img class="sent" src="https://c.animaapp.com/maux3g8mXDdSGo/img/sent.png" />
           <img class="camera-2" src="https://c.animaapp.com/maux3g8mXDdSGo/img/camera-1.png" />
-          <div class="rectangle-6"></div>
-          <div class="rectangle-7"></div>
-          <div class="ellipse"></div>
-          <img class="sample-4" src="https://c.animaapp.com/maux3g8mXDdSGo/img/sample2-2.png" />
         </div>
       </div>
     </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("chat-input");
+    const sendBtn = document.getElementById("chat-send");
+    const messages = document.getElementById("chat-messages");
+
+    function appendMessage(text, sender = "user") {
+      const msg = document.createElement("div");
+      msg.textContent = text;
+      msg.className = sender === "user" ? "message user-message" : "message bot-message";
+      msg.style.marginBottom = "15px";
+      msg.style.padding = "12px 16px";
+      msg.style.borderRadius = "12px";
+      msg.style.maxWidth = "70%";
+      msg.style.wordWrap = "break-word";
+      msg.style.background = sender === "user" ? "#00c3a5" : "#e0e0e0";
+      msg.style.color = sender === "user" ? "#fff" : "#000";
+      msg.style.alignSelf = sender === "user" ? "flex-end" : "flex-start";
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMessage(text, "user");
+      input.value = "";
+
+      setTimeout(() => {
+        const reply = getBotReply(text);
+        appendMessage(reply, "bot");
+      }, 500);
+    }
+
+    function getBotReply(input) {
+      const lower = input.toLowerCase();
+      if (lower.includes("book")) return "Sure! You can book through the 'BOOK NOW' page.";
+      if (lower.includes("help")) return "I'm here to help! Ask me anything.";
+      if (lower.includes("doctor")) return "Search for doctors by hospital or specialty.";
+      return "Thanks for your message. We'll get back to you soon!";
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+    input.addEventListener("keypress", e => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    function getBotReply(input) {
+  const lower = input.toLowerCase();
+
+  if (lower.includes("book")) 
+    return "Sure! You can book an appointment through the 'BOOK NOW' page above.";
+
+  if (lower.includes("help")) 
+    return "I'm here to help! Ask me about doctors, clinics, or appointment dates.";
+
+  if (lower.includes("doctor") || lower.includes("doctors"))
+    return `🩺 **Here are our available doctors and their upcoming dates:**\n
+- **Dr. Aisha Khan** *(Aster Clinic)* — May 22, 25, 28  
+- **Dr. Omar Ali** *(Prime Hospital)* — May 23, 26, 29  
+- **Dr. Fatima Zahra** *(Menalabs)* — May 24, 27, 30  
+- **Dr. Sameer Yusuf** *(NMC Hospitals)* — May 22, 25, 31  
+- **Dr. Lina Al Mazrouei** *(Aster Clinic)* — May 23, 26, 29  
+- **Dr. Rashid Mohammed** *(Prime Hospital)* — May 24, 27, 30  
+- **Dr. Salma Yousif** *(Menalabs)* — May 22, 25, 28`;
+
+
+  if (lower.includes("clinic") || lower.includes("hospital")) 
+    return "We partner with Aster Clinic, Prime Hospital, Menalabs, and NMC Hospitals.";
+
+  return "Thanks for your message. We'll get back to you soon!";
+}
+
+  });
+  
+</script>
+
+
   </body>
 </html>

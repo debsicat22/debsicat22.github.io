@@ -618,4 +618,36 @@
   white-space: nowrap;
 }
 
+/* Animation base styles */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.slide-in {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.slide-in.show {
+  transform: translateX(0);
+  opacity: 1;
+}
 

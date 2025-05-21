@@ -89,5 +89,91 @@
         </div>
       </div>
     </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Fade in images with zoom effect one by one
+    const images = document.querySelectorAll(".ospi, .docdirect-is-a, .fa-bc, .sample, .img, .medz, .play, .icon, .element, .caa-b-a, .illustartion-of");
+    images.forEach((img, i) => {
+      img.style.opacity = 0;
+      img.style.transform = "scale(0.8)";
+      img.style.transition = `opacity 0.8s ease ${i * 0.3}s, transform 0.8s ease ${i * 0.3}s`;
+      setTimeout(() => {
+        img.style.opacity = 1;
+        img.style.transform = "scale(1)";
+      }, 100);
+    });
+
+    // 2. Slide in text paragraphs from left on scroll
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach(p => {
+      p.style.opacity = 0;
+      p.style.transform = "translateX(-50px)";
+      p.style.transition = "opacity 1s ease, transform 1s ease";
+    });
+
+    function handleScroll() {
+      paragraphs.forEach(p => {
+        const rect = p.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          p.style.opacity = 1;
+          p.style.transform = "translateX(0)";
+        }
+      });
+    }
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Trigger on load too
+
+    // 3. Pulsate "BOOK NOW" buttons continuously
+    const bookNowBtns = document.querySelectorAll(".text-wrapper-2, .text-wrapper-3, .text-wrapper-7, .text-wrapper-13");
+    bookNowBtns.forEach(btn => {
+      btn.style.animation = "pulse 2s infinite ease-in-out";
+    });
+
+    // 4. Hover glow effect on navigation links
+    const navLinks = document.querySelectorAll("a > div[class^='text-wrapper-']");
+    navLinks.forEach(link => {
+      link.style.transition = "text-shadow 0.3s ease";
+
+      link.addEventListener("mouseenter", () => {
+        link.style.textShadow = "0 0 8px #007BFF, 0 0 12px #00BFFF";
+      });
+      link.addEventListener("mouseleave", () => {
+        link.style.textShadow = "none";
+      });
+    });
+
+    // 5. Reveal "OUR HEALTH PARTNERS" text with bounce effect on scroll
+    const partnersText = document.querySelector(".OUR-HEALTH-PARTNERS");
+    partnersText.style.opacity = 0;
+    partnersText.style.transform = "translateY(30px)";
+    partnersText.style.transition = "opacity 1s ease, transform 1s ease";
+
+    function revealPartners() {
+      const rect = partnersText.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9) {
+        partnersText.style.opacity = 1;
+        partnersText.style.transform = "translateY(0)";
+        window.removeEventListener("scroll", revealPartners);
+      }
+    }
+    window.addEventListener("scroll", revealPartners);
+    revealPartners();
+
+  });
+</script>
+
+<style>
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0,123,255, 0.7);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px 6px rgba(0,123,255, 0);
+    }
+  }
+</style>
+
   </body>
 </html>

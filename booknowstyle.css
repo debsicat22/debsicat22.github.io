@@ -101,7 +101,6 @@
   width: 2684px;
   height: 3221px;
   top: 322px;
-  left: -4px;
 }
 
 .book-now .text-wrapper-9 {
@@ -545,3 +544,79 @@
   line-height: normal;
   white-space: nowrap;
 }
+
+.fullpage-chatbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #f9fbfd, #e6f4f1);
+  width: 1600px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translate(34%, 2%);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #00bfa6;
+  box-shadow: 0 0 8px rgba(0, 191, 166, 0.4);
+}
+
+.chat-send {
+  padding: 18px 28px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  background-color: #00bfa6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-send:hover {
+  background-color: #009f8b;
+  transform: translateY(-2px);
+}
+

@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="aboutusstyle.css" />
   </head>
   <body>
@@ -70,5 +69,92 @@
         </div>
       </div>
     </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Animate headline text with typing effect
+    const headline = document.querySelector(".text-wrapper");
+    if (headline) {
+      const text = headline.textContent;
+      headline.textContent = "";
+      let index = 0;
+      const typingSpeed = 100; // ms per character
+
+      function type() {
+        if (index < text.length) {
+          headline.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, typingSpeed);
+        }
+      }
+      type();
+    }
+
+    // 2. Bounce animation for "BOOK NOW" buttons on hover
+    const bookNowButtons = document.querySelectorAll(".text-wrapper-2, .text-wrapper-10, .text-wrapper-8");
+    bookNowButtons.forEach(btn => {
+      btn.style.transition = "transform 0.3s ease";
+
+      btn.addEventListener("mouseenter", () => {
+        btn.style.transform = "scale(1.1) translateY(-10px)";
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "scale(1) translateY(0)";
+      });
+    });
+
+    // 3. Smooth color fade-in for paragraphs on page load
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((p, i) => {
+      p.style.opacity = 0;
+      p.style.transition = `opacity 1.5s ease ${i * 0.3}s`;
+      setTimeout(() => {
+        p.style.opacity = 1;
+      }, 100);
+    });
+
+    // 4. Rotate social media icons slowly on hover
+    const socialIcons = document.querySelectorAll(".icon, .play, .whatsapp-image, .whatsapp-image-2");
+    socialIcons.forEach(icon => {
+      icon.style.transition = "transform 0.6s ease";
+
+      icon.addEventListener("mouseenter", () => {
+        icon.style.transform = "rotate(15deg)";
+      });
+
+      icon.addEventListener("mouseleave", () => {
+        icon.style.transform = "rotate(0deg)";
+      });
+    });
+
+    // 5. Show a "Thank you for visiting!" message after 10 seconds
+    setTimeout(() => {
+      const thankYouMsg = document.createElement("div");
+      thankYouMsg.textContent = "🙏 Thank you for visiting DocDirect!";
+      thankYouMsg.style.position = "fixed";
+      thankYouMsg.style.bottom = "20px";
+      thankYouMsg.style.left = "50%";
+      thankYouMsg.style.transform = "translateX(-50%)";
+      thankYouMsg.style.background = "#007BFF";
+      thankYouMsg.style.color = "#fff";
+      thankYouMsg.style.padding = "12px 24px";
+      thankYouMsg.style.borderRadius = "25px";
+      thankYouMsg.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+      thankYouMsg.style.fontSize = "16px";
+      thankYouMsg.style.zIndex = "9999";
+      document.body.appendChild(thankYouMsg);
+
+      // Fade out after 5 seconds
+      setTimeout(() => {
+        thankYouMsg.style.transition = "opacity 2s ease";
+        thankYouMsg.style.opacity = "0";
+        setTimeout(() => {
+          thankYouMsg.remove();
+        }, 2000);
+      }, 5000);
+    }, 10000);
+  });
+</script>
+
   </body>
 </html>
