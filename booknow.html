@@ -181,28 +181,40 @@
       }, 500);
     }
 
-    function getBotReply(input) {
-      const lower = input.toLowerCase();
-      if (lower.includes("book")) return "Sure! You can book through the 'BOOK NOW' page.";
-      if (lower.includes("help")) return "I'm here to help! Ask me anything.";
-      if (lower.includes("doctor")) return "Search for doctors by hospital or specialty.";
-      return "Thanks for your message. We'll get back to you soon!";
-    }
-
     sendBtn.addEventListener("click", sendMessage);
     input.addEventListener("keypress", e => {
       if (e.key === "Enter") sendMessage();
     });
 
-    function getBotReply(input) {
-  const lower = input.toLowerCase();
+    let expectingBookingDetails = false;
 
-  if (lower.includes("book")) 
-    return "Sure! You can book an appointment through the 'BOOK NOW' page above.";
+function getBotReply(input) {
+  const lower = input.toLowerCase().trim();
 
+  // Handle follow-up to booking
+  if (expectingBookingDetails) {
+    expectingBookingDetails = false;
+    return `✅ Booking request received: "${input}". Our team will confirm your appointment shortly.`;
+  }
+
+  // Keywords for initiating booking
+if (lower.includes("book")) {
+  expectingBookingDetails = true;
+  return `📅 Sure! Let's book an appointment.\n\n🩺 **Here are our available doctors and their upcoming dates:**\n
+- **Dr. Aisha Khan** *(Aster Clinic)* — May 22, 25, 28  
+- **Dr. Omar Ali** *(Prime Hospital)* — May 23, 26, 29  
+- **Dr. Fatima Zahra** *(Menalabs)* — May 24, 27, 30  
+- **Dr. Sameer Yusuf** *(NMC Hospitals)* — May 22, 25, 31  
+- **Dr. Lina Al Mazrouei** *(Aster Clinic)* — May 23, 26, 29  
+- **Dr. Rashid Mohammed** *(Prime Hospital)* — May 24, 27, 30  
+- **Dr. Salma Yousif** *(Menalabs)* — May 22, 25, 28\n\nPlease tell me the **doctor's name** you'd like to book with.`;
+}
+
+  // Help response
   if (lower.includes("help")) 
-    return "I'm here to help! Ask me about doctors, clinics, or appointment dates.";
+    return "🆘 I'm here to help! You can ask about available doctors, clinics, services, pricing, or book an appointment.";
 
+  // Doctors info
   if (lower.includes("doctor") || lower.includes("doctors"))
     return `🩺 **Here are our available doctors and their upcoming dates:**\n
 - **Dr. Aisha Khan** *(Aster Clinic)* — May 22, 25, 28  
@@ -213,11 +225,40 @@
 - **Dr. Rashid Mohammed** *(Prime Hospital)* — May 24, 27, 30  
 - **Dr. Salma Yousif** *(Menalabs)* — May 22, 25, 28`;
 
-
+  // Clinics/hospitals
   if (lower.includes("clinic") || lower.includes("hospital")) 
-    return "We partner with Aster Clinic, Prime Hospital, Menalabs, and NMC Hospitals.";
+    return "🏥 We partner with: Aster Clinic, Prime Hospital, Menalabs, and NMC Hospitals across the UAE.";
 
-  return "Thanks for your message. We'll get back to you soon!";
+  // Location info
+  if (lower.includes("location") || lower.includes("where"))
+    return "📍 We're based in the UAE and work with top-rated clinics and hospitals nationwide.";
+
+  // Services offered
+  if (lower.includes("services"))
+    return "🧾 Our services include:\n- General Check-ups\n- Specialist Consultations\n- Lab Testing\n- Mental Health Support";
+
+  // Pricing
+  if (lower.includes("price") || lower.includes("cost") || lower.includes("fee"))
+    return "💰 Prices vary by service and clinic. Visit our 'Services' page or contact us directly for detailed info.";
+
+  // Opening hours
+  if (lower.includes("hours") || lower.includes("open") || lower.includes("timing"))
+    return "🕗 Most clinics are open from 8 AM to 8 PM. Check individual clinic pages for exact hours.";
+
+  // Emergency handling
+  if (lower.includes("emergency"))
+    return "🚨 In case of emergency, please call **998** in the UAE or visit the nearest hospital immediately.";
+
+  // Cancel or reschedule
+  if (lower.includes("cancel") || lower.includes("reschedule"))
+    return "🔁 To cancel or reschedule, use your booking confirmation email or contact the clinic directly.";
+
+  // Gratitude response
+  if (lower.includes("thank") || lower.includes("thanks"))
+    return "🙏 You're very welcome! Let me know if there's anything else I can help with.";
+
+  // Default fallback
+  return "🤖 Thanks for your message. I'll try my best to assist, or a team member will follow up with you shortly.";
 }
 
   });
