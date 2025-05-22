@@ -974,3 +974,46 @@
   top: 202px;
   left: 2149px;
 }
+
+input.rectangle-6,
+input.rectangle-7,
+input.rectangle-8,
+select.rectangle-9 {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding-left: 100px; 
+}
+
+textarea.rectangle-10 {
+  height: 10px;
+  resize: vertical;
+  width: 100%;
+  max-width: 1550px;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button.rectangle-11 {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.rectangle-11:hover {
+  background-color: #0056b3;
+}

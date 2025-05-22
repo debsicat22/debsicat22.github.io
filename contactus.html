@@ -30,7 +30,7 @@
           <img class="medz" src="https://c.animaapp.com/mauxebzlFGvLkK/img/medz-1.png" />
           <div class="rectangle-4"></div>
           <div class="rectangle-4"></div>
-          <div class="text-wrapper-8">BOOK NOW</div>
+<a href="booknow.html"><div class="text-wrapper-8">BOOK NOW</div></a>
           <p class="p">DocDirect at your service. We are open for free booking and consultations.</p>
           <div class="text-wrapper-9">BOOK NOW!</div>
           <img class="line" src="https://c.animaapp.com/mauxebzlFGvLkK/img/line-11.svg" />
@@ -54,32 +54,34 @@
           <div class="rectangle-7"></div>
           <div class="rectangle-8"></div>
           <div class="rectangle-9"></div>
-          <div class="text-wrapper-17">Full Name</div>
-          <div class="text-wrapper-18">Enter your full name...</div>
-          <div class="text-wrapper-40">E-mail</div>
-          <div class="text-wrapper-19">Enter your E-mail Address...</div>
-          <div class="text-wrapper-20">Enter your Phone number...</div>
-          <div class="text-wrapper-21">Choose one option...</div>
-          <div class="text-wrapper-22">Phone Number</div>
-          <div class="text-wrapper-23">Inquiry Purpose</div>
-          <div class="text-wrapper-24">Message Us</div>
+<form action="#" method="post">
+  <label for="full-name" class="text-wrapper-17">Full Name</label>
+  <input type="text" id="full-name" name="full-name" placeholder="Enter your full name..." class="rectangle-6" />
+
+  <label for="email" class="text-wrapper-40">E-mail</label>
+  <input type="email" id="email" name="email" placeholder="Enter your E-mail Address..." class="rectangle-7" />
+
+  <label for="phone" class="text-wrapper-22">Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="Enter your Phone number..." class="rectangle-8" />
+
+  <label for="inquiry" class="text-wrapper-23">Inquiry Purpose</label>
+  <select id="inquiry" name="inquiry" class="rectangle-9">
+    <option value="">Choose one option...</option>
+    <option value="consultation">Consultation</option>
+    <option value="feedback">Feedback</option>
+    <option value="support">Support</option>
+  </select>
           <img class="customer" src="img/customer.png" />
           <img class="phone-2" src="img/phone.png" />
           <img class="letter-2" src="img/letter.png" />
           <img class="help" src="img/help.png" />
-          <div class="group">
-            <div class="overlap-group">
-              <img class="line-3" src="https://c.animaapp.com/mauxebzlFGvLkK/img/line-12.svg" />
-              <img class="line-4" src="https://c.animaapp.com/mauxebzlFGvLkK/img/line-13.svg" />
-            </div>
-          </div>
           <div class="rectangle-10"></div>
           <img class="speech-bubble" src="img/speech bubble.png" />
-          <div class="text-wrapper-25">Enter your message here...</div>
-          <div class="rectangle-11"></div>
-          <div class="text-wrapper-26">Submit Form</div>
-          <img class="arrow" src="https://c.animaapp.com/mauxebzlFGvLkK/img/arrow.png" />
-        </div>
+          <label for="message" class="text-wrapper-24">Message Us</label>
+  <textarea id="message" name="message" placeholder="Enter your message here..." class="rectangle-10"></textarea>
+          <button type="submit" class="rectangle-11 text-wrapper-26">Submit Form</button>
+</form>
+</div>
         <div class="overlap-2">
           <img class="sample-2" src="https://c.animaapp.com/mauxebzlFGvLkK/img/sample2-2-1.png" />
           <div class="overlap-3">
@@ -105,5 +107,157 @@
         </div>
       </div>
     </div>
+    <script>
+  // Simple form validation on submit
+  document.querySelector('form')?.addEventListener('submit', function (e) {
+    const fullName = document.getElementById('full-name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const inquiry = document.getElementById('inquiry').value;
+
+    if (!fullName || !email || !phone || !message || !inquiry) {
+      e.preventDefault();
+      alert("Please fill in all fields before submitting.");
+    } else {
+      alert("Thank you! Your form has been submitted.");
+    }
+  });
+
+  // Highlight placeholder when input is focused
+  document.querySelectorAll('input, textarea, select').forEach(input => {
+    input.addEventListener('focus', () => {
+      input.style.backgroundColor = '#f0f9ff';
+    });
+    input.addEventListener('blur', () => {
+      input.style.backgroundColor = '';
+    });
+  });
+
+  // Scroll-to-top button
+  const scrollBtn = document.createElement('button');
+  scrollBtn.innerText = "↑ Top";
+  scrollBtn.style.position = 'fixed';
+  scrollBtn.style.bottom = '20px';
+  scrollBtn.style.right = '20px';
+  scrollBtn.style.padding = '10px 15px';
+  scrollBtn.style.backgroundColor = '#0066cc';
+  scrollBtn.style.color = '#fff';
+  scrollBtn.style.border = 'none';
+  scrollBtn.style.borderRadius = '5px';
+  scrollBtn.style.cursor = 'pointer';
+  scrollBtn.style.display = 'none';
+  document.body.appendChild(scrollBtn);
+
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+<!-- Modal for confirmation -->
+<div id="confirmationModal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center; align-items: center;
+  z-index: 1000;">
+  <div style="
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;">
+    <h3>Form Submitted!</h3>
+    <p>Thank you for getting in touch with us.</p>
+    <button onclick="document.getElementById('confirmationModal').style.display='none'" style="
+      margin-top: 10px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<!-- Loading Spinner -->
+<div id="loadingSpinner" style="
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;">
+  <div style="
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;"></div>
+</div>
+
+<style>
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+input:invalid, textarea:invalid, select:invalid {
+  border: 2px solid red;
+}
+input:valid, textarea:valid, select:valid {
+  border: 2px solid green;
+}
+</style>
+
+<script>
+  const form = document.querySelector('form');
+  const modal = document.getElementById('confirmationModal');
+  const spinner = document.getElementById('loadingSpinner');
+
+  // Real-time validation for required fields
+  document.querySelectorAll('input, textarea, select').forEach(field => {
+    field.addEventListener('input', () => {
+      if (field.checkValidity()) {
+        field.style.borderColor = 'green';
+      } else {
+        field.style.borderColor = 'red';
+      }
+    });
+  });
+
+  // Form submission handler
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('full-name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const inquiry = document.getElementById('inquiry').value;
+
+    if (!fullName || !email || !phone || !message || !inquiry) {
+      alert("Please complete all fields.");
+      return;
+    }
+
+    // Show spinner
+    spinner.style.display = 'block';
+
+    // Simulate delay (e.g., form sending to server)
+    setTimeout(() => {
+      spinner.style.display = 'none';
+      modal.style.display = 'flex';
+      form.reset();
+      // Reset borders after submission
+      document.querySelectorAll('input, textarea, select').forEach(f => f.style.borderColor = '');
+    }, 1500);
+  });
+</script>
+
   </body>
 </html>
